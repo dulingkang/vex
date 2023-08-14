@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+:root {
+  --bodyColor: #1C1C1C;
+  --bodyBackground: #FFF;
+  --tableColor: #000;
+  --tableBackground: #FFF;
+  --tableHeadSeparator: #333;
+  --tableHeadBackground: rgba(225, 225, 225, 0.5);
+  --tableCellBorders: #999;
+  --tableRowStripe: rgba(140, 140, 90, 0.5);
+  --tabBorders: #CCC;
+  --tabListBackground: #EEE;
+  --tabSelectorColor: #000;
+  --tabSelectorBorders: #333;
+  --tabSelectorHover: #999;
+  --tabSelectedColor: #000;
+  --tabSelectedBackground: #BBB;
+  --tabContentBackground: #FFF;
+  --leftNavBorder: #000;
+  --leftNavBackground: #CCC;
+  --treeViewColor: #666;
+  --treeViewBackground: #5C5C5C;
+  --treeViewItemBackground: #FFF;
+  --treeViewItemHover: #999;
+  --treeViewButtonHover: #E0E0E0;
+  --treeViewLeafColor: #007;
+  --treeViewLeafSelectedBackground: #BBB;
+  --treeViewLeafSelectedBorder: #333;
+  --headerBackground: #E0E0E0;
+  --headerBorder: #000;
+  --headerColor: #131313;
+  --footerColor: #1C1C1C;
+  --footerBackground: #E0E0E0;
+  --footerBorder: #000;
+}
+
+.theme_vcs {
+  /* default */
+}
+
+.theme_vex_edr {
+  --bodyColor: #636363;
+  --bodyBackground: #FFF;
+  --tableColor: #636363;
+  --tableBackground: #FFF;
+  --tableHeadSeparator: #D22530;
+  --tableHeadBackground: rgba(225, 225, 225, 0.5);
+  --tableCellBorders: #D22530;
+  --tableRowStripe: #CCC;
+  --tabBorders: #D22530;
+  --tabListBackground: #CCC;
+  --tabSelectorColor: #000;
+  --tabSelectorBorders: #D22530;
+  --tabSelectorHover: #999;
+  --tabSelectedColor: #FFF;
+  --tabSelectedBackground: #D22530;
+  --tabContentBackground: #FFF;
+  --leftNavBorder: #D22530;
+  --leftNavBackground: #CCC;
+  --treeViewColor: #666;
+  --treeViewBackground: #D22530;
+  --treeViewItemBackground: #FFF;
+  --treeViewItemHover: #D22530;
+  --treeViewButtonHover: #E0E0E0;
+  --treeViewLeafColor: #999;
+  --treeViewLeafSelectedBackground: #D22530;
+  --treeViewLeafSelectedBorder: #FFF;
+  --headerBackground: #D22530;
+  --headerBorder: #D22530;
+  --headerColor: #FFF;
+  --footerColor: #FFF;
+  --footerBackground: #D22530;
+  --footerBorder: #D22530;
+}
+
+.theme_vex_edr #treeView {
+  margin-top: 35px;
+}
+
+.theme_vex_edr .header img,
+.theme_v5_beta .header img {
+  vertical-align: baseline;
+}
+
+.theme_vex_edr .langIcon,
+.theme_v5_beta .langIcon {
+  margin-top: 18px;
+}
+
+.theme_v5_beta {
+  --bodyColor: #CCC;
+  --bodyBackground: #1C1C1C;
+  --tableColor: #CCC;
+  --tableBackground: #1C1C1C;
+  --tableHeadSeparator: #333;
+  --tableHeadBackground: rgba(225, 225, 225, 0.5);
+  --tableCellBorders: #333;
+  --tableRowStripe: rgba(140, 140, 90, 0.5);
+  --tabBorders: #333;
+  --tabListBackground: #666;
+  --tabSelectorBorders: #333;
+  --tabSelectorHover: #999;
+  --tabSelectedBackground: #999;
+  --tabContentBackground: #1C1C1C;
+  --leftNavBorder: #666;
+  --leftNavBackground: #1C1C1C;
+  --treeViewColor: #CCC;
+  --treeViewBackground: #1C1C1C;
+  --treeViewItemBackground: #1C1C1C;
+  --treeViewItemHover: #999;
+  --treeViewButtonHover: #FFF;
+  --treeViewLeafColor: #666;
+  --treeViewLeafSelectedBackground: #BBB;
+  --treeViewLeafSelectedBorder: #333;
+  --headerBackground: #1C1C1C;
+  --headerBorder: #FFF;
+  --headerColor: #999;
+  --footerColor: #999;
+  --footerBackground: #1C1C1C;
+  --footerBorder: #FFF;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/NotoSansMono-Regular.woff') format('woff'),
+  url('/fonts/NotoSansMono-Regular.ttf') format('truetype');
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: aktiv-grotesk, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  color: var(--bodyColor);
+  background: var(--bodyBackground);
+}
+
+pre,
+code {
+  font-family: 'Noto Sans Mono', 'Lucida Console', 'Courier', 'Courier New', monospace;
+  _font-family: 'Noto Sans Mono', 'Lucida Console', 'Courier', 'Courier New', monospace;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border-style: outset;
+}
+
+button:hover {
+  border-style: inset;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.detailTable caption {
+  color: var(--tableColor);
+  background: var(--tableBackground);
+  font: italic 85%/1 arial, sans-serif;
+}
+
+.detailTable td,
+.detailTable th {
+  font-size: 90%;
+}
+
+.detailTable td:first-child,
+.detailTable th:first-child {
+  border-left-width: 0;
+}
+
+.detailTable thead {
+  color: var(--tableColor);
+  background: var(--tableBackground);
+}
+
+.detailTable thead th {
+  font-weight: bold;
+  border-bottom: solid 1px var(--tableCellBorders);
+}
+
+.detailTable td {
+  background: transparent;
+}
+
+.detailTable-odd td,
+.detailTable tr:nth-child(2n-1) td {
+  background: var(--tableRowStripe);
+}
+
+.detailTable th {
+  background: var(--tableHeadBackground);
+}
+
+.detailTable-bordered {
+  border: 1px solid var(--tableCellBorders);
+  border-collapse: separate;
+}
+
+.detailTable-bordered td,
+.detailTable-bordered th {
+  border-bottom: 1px solid var(--tableHeadSeparator);
+  border-right: 1px solid var(--tableCellBorders);
+  border-collapse: separate;
+}
+
+.detailTable-bordered tbody>tr:last-child td {
+  border-bottom-width: 0;
+}
+
+.detailTable-bordered tbody>tr td:last-child,
+.detailTable-bordered thead>tr th:last-child {
+  border-right-width: 0;
+}
+
+.tabList {
+  border: 1px solid var(--tabBorders);
+  background: var(--tabListBackground);
+}
+
+.tabList>.tabSelector {
+  color: var(--tabSelectorColor);
+  background: inherit;
+  border: 1px solid var(--tabSelectorBorders);
+  font-size: small;
+}
+
+.tabList>.tabSelector:hover {
+  background: var(--tabSelectorHover);
+}
+
+.tabList>.tabSelector.selected {
+  color: var(--tabSelectedColor);
+  background: var(--tabSelectedBackground);
+}
+
+.tabList .tabContent {
+  background: var(--tabContentBackground);
+}
+
+.tabContent {
+  border: 1px solid var(--tabBorders);
+  border-top: none;
+}
+
+.leftNav {
+  border-right: 1px solid var(--leftNavBorder);
+  background: var(--leftNavBackground);
+}
+
+#treeView {
+  color: var(--treeViewColor);
+  background: var(--treeViewBackground);
+  font-family: 'Noto Sans Mono', 'Lucida Console', 'Courier', 'Courier New', monospace;
+}
+
+.treeViewItem {
+  background: var(--treeViewItemBackground);
+  opacity: 100%;
+}
+
+.hamburger,
+.treeViewButton {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border: 1px outset;
+  user-select: none;
+}
+
+.hamburger:hover,
+.treeViewButton:hover,
+.treeViewLeaf:hover .treeViewButton,
+.treeViewItem div:hover .treeViewButton {
+  border-style: inset;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: var(--treeViewButtonHover);
+}
+
+.treeViewLeaf, .treeViewLeaf a {
+  color: var(--treeViewLeafColor);
+}
+
+.treeViewLeaf:hover,
+.treeViewItem div:hover {
+  background: var(--treeViewItemHover);
+}
+
+.treeViewLeaf.selected,
+.treeViewLeaf:active {
+  background: var(--treeViewLeafSelectedBackground);
+  border: 1px solid var(--treeViewLeafSelectedBorder);
+}
+
+.header {
+  color: var(--headerColor);
+  background: var(--headerBackground);
+  border-bottom: 1px solid var(--headerBorder);
+}
+
+.header a {
+  color: var(--headerColor);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer {
+  color: var(--footerColor);
+  background: var(--footerBackground);
+  border-top: 1px solid var(--footerBackground);
+}
+
+a.typeLink {
+  color: var(--treeViewLeafColor);
+}
+
+.versionInfo a {
+  color: var(--footerColor);
+}
+
+.theme_vcs .theme_vex_edr_only,
+.theme_vcs .theme_v5_beta_only,
+.theme_vex_edr .theme_vcs_only,
+.theme_vex_edr .theme_v5_beta_only,
+.theme_v5_beta .theme_vex_edr_only,
+.theme_v5_beta .theme_vcs_only {
+  display: none;
+}

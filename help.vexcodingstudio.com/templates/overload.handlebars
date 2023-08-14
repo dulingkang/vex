@@ -1,0 +1,35 @@
+<div id="overload_{{@index}}" class="tabContent{{#if @first}} selected{{/if}}">
+  <h3>Description</h3>
+  <div class="indent">
+    {{~> member_description .}}
+    {{#if params.length}}
+        <em>Parameters:</em>
+        <table class="paramList detailTable detailTable-responsive detailTable-bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+          {{#each params}}
+            <tr>
+              <td>{{{declname}}}</td>
+              <td>
+                {{getTypeHashLink type}}
+                {{#if @typeHashLink}}
+                  <a id="{{{@typeHashLink}}}" class="typeLink"><pre>{{{type}}}</pre></a>
+                {{else}}
+                  <pre>{{{type}}}</pre>
+                {{/if}}
+              </td>
+              <td>{{{desc}}}</td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+    {{/if}}
+  </div>
+  {{> additionalinfo .}}
+</div>

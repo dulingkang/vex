@@ -1,0 +1,13 @@
+<ul class="treeViewGroup">
+  {{~#each .~}}
+    {{~#if children~}}
+      <li class="treeViewItem" id="{{~id~}}">
+        <div><span class="treeViewButton">+</span>
+        {{~name~}}</div>
+        {{> treeview_children children}}
+      </li>
+    {{~else~}}
+      {{> treeview_leaf .}}
+    {{~/if~}}
+  {{~/each~}}
+</ul>

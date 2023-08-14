@@ -1,0 +1,13 @@
+<div class="langSelector">
+  <em>Language:</em>
+  {{#each languages}}
+    <button id="{{id}}">
+      <img src="images/{{id}}_button.png" style="vertical-align: middle;" />
+      <span>{{display}}</span>
+    </button>
+  {{/each}}
+  <span class="themeSelector">
+    <label for="theme">Theme: <select id="theme"><option value="vcs">VCS</option><option value="vex_edr">VEX EDR</option><option value="v5_beta">V5 Beta</option></select></label>
+  </span>
+  <span class="versionInfo right"></span>
+</div>

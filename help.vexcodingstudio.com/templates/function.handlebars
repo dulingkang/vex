@@ -1,0 +1,38 @@
+<h2>Function</h2>
+<div class="indent">
+  <em>Returns:</em>
+  {{#with returnType~}}
+    <span><code>{{.}}</code></span>
+  {{~else~}}
+    {{#compare drawercat "==" "constructor"}}
+      {{getTypeHashLink classname}}
+      {{#if @typeHashLink}}
+        <a id="{{{@typeHashLink}}}" class="typeLink"><code>{{{classname}}}</code></a>
+      {{else}}
+        <code>{{{classname}}}</code>
+      {{/if}}
+    {{else}}
+      nothing
+    {{/compare}}
+  {{~/with}}
+</div>
+<div class="memberOverloads">
+  <h3>Overloads:</h3>
+
+  <div class="tabList">
+    {{#each overloads}}
+      <div class="tabSelector{{#if @first}} selected{{/if}}">
+        {{#compare ../overloads.length ">" 1}}
+          <button id="button_{{@index}}">{{#if @first}} - {{else}} + {{/if}}</button>
+        {{else}}
+          <span>&#160;</span>
+        {{/compare}}
+        {{#if image}}
+          <img src="{{image}}">
+        {{/if}}
+        <pre>{{{../name}}}{{{argsstring}}}</pre>
+      </div>
+      {{> overload .}}
+    {{/each}}
+  </div>
+</div>

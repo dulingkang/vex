@@ -1,0 +1,18 @@
+<div class="frameSet">
+  {{~> header . theme="vcs"}}
+  {{~> header . theme="vex_edr"}}
+  {{~> header . theme="v5_beta"}}
+  <nav class="leftNav">
+    <div id="treeView">
+      {{~> treeview_root .}}
+    </div>
+  </nav>
+  <section id="main">
+    <div id="content">
+      {{~> main_content .}}
+    </div>
+  </section>
+  <div class="fixed footer">
+    {{~> footer .}}
+  </div>
+</div>

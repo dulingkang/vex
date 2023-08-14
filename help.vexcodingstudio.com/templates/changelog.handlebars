@@ -1,0 +1,24 @@
+<div class="refPage">
+  <h2>Changelog:</h2>
+  {{#each .}}
+    <h3>VCS Version {{version}}</h3>
+    <h4>Code Elements Added:</h4>
+      {{#ifNotEmpty added}}
+        <ul>
+        {{#each added}}
+          <li><a id="{{id}}" class="typeLink"><code>{{name}}</code></a><br></li>
+        {{/each}}
+        </ul>
+      {{else}}
+        No Changes
+      {{/ifNotEmpty}}
+    {{#ifNotEmpty removed}}
+      <h4>Code Elements Removed:</h4>
+      <ul>
+      {{#each removed}}
+        <li><code>{{name}}</code><br></li>
+      {{/each}}
+      </ul>
+    {{/ifNotEmpty}}
+  {{/each}}
+</div>

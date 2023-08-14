@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+    #content, code, pre, .footer {
+        font-size: x-small;
+    }
+
+    .footer img {
+      height: 20px;
+      display: inline-block;
+    }
+
+    #content img {
+      max-width: 300px;
+    }
+}

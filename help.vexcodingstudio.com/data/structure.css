@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: baseline;
+  max-width: 100%;
+}
+
+pre {
+  white-space: pre;
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  vertical-align: top;
+}
+
+.deadcenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome {
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  z-index: -1;
+}
+
+.detailTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  margin-bottom: 24px;
+  display: table;
+}
+
+.detailTable caption {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.detailTable td,
+.detailTable th {
+  margin: 0;
+  overflow: visible;
+  padding: 8px 16px;
+}
+
+.detailTable thead {
+  text-align: left;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.detailTable td {
+  vertical-align: middle;
+}
+
+.detailTable td,
+.detailTable th {
+  display: table-cell;
+}
+
+.detailTable td p {
+  line-height: 18px;
+}
+
+.detailTable td p:last-child {
+  margin-bottom: 0;
+}
+
+.detailTable-responsive {
+  margin-bottom: 24px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.detailTable-responsive table {
+  margin-bottom: 0 !important;
+}
+
+.detailTable-responsive table td,
+.detailTable-responsive table th {
+  white-space: nowrap;
+}
+
+.tabList {
+  overflow: hidden;
+}
+
+.tabList>.tabSelector {
+  outline: none;
+  cursor: pointer;
+  padding: 1px;
+  transition: 0.3s;
+}
+
+.tabList>.tabSelector pre {
+  display: inline-block;
+}
+
+.tabList>.tabSelector button {
+  margin: 0 5px;
+}
+
+.tabList>.tabSelector.selected {
+  cursor: default;
+}
+
+.tabContent {
+  display: none;
+  padding: 6px 12px;
+}
+
+.tabContent.selected {
+  display: block;
+}
+
+.tabContent.selected * {
+  display: default;
+}
+
+.frameSet {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.leftNav {
+  flex: 0 0 auto;
+  padding-bottom: 2.5em;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 100%;
+  width: fit-content;
+  z-index: 200;
+}
+
+#treeView {
+  position: fixed;
+  margin-top: 50px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: -webkit-fill-available;
+  width: fit-content;
+  min-width: 300px;
+}
+
+#treeView ul {
+  list-style-type: none;
+  -webkit-padding-start: 25px;
+  width: 100%;
+}
+
+#treeView li {
+  width: 100%;
+  cursor: pointer;
+}
+
+#treeView ul.treeViewRoot {
+  -webkit-padding-start: 0px;
+}
+
+#treeView div {
+  width: 100%;
+  padding: 2px;
+}
+
+.treeViewButton {
+  margin: 0;
+  cursor: pointer;
+  overflow: visible;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-right: 3px;
+}
+
+.treeViewImage, .treeViewItem, .treeViewLeaf {
+  width: fit-content;
+  padding: 3px;
+  margin: 2px;
+}
+
+button.hamburger {
+  margin-top: 20px;
+  user-select: none;
+}
+
+#main {
+  flex: 1 1 auto;
+  min-height: 100%;
+}
+
+#content {
+  height: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+  margin-left: 300px;
+}
+
+.refPage {
+  /* phi */
+  padding: 1.618em;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  z-index: 400;
+  opacity: 100%;
+}
+
+.header {
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.header a {
+  vertical-align: middle;
+}
+
+.language {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.baseline {
+  vertical-align:
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+.footer button {
+  margin: 5px;
+}
+
+.langSelector button {
+  user-select: none;
+}
+
+.themeSelector {
+  visibility: hidden;
+}
+
+.right {
+  float: right;
+  margin: 5px;
+}
+
+.indent {
+  padding-left: 1.618em;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+:not(div.CodeMirror) pre {
+  padding-left: 0;
+  border-left: 0;
+}
+
+:not(.CodeMirror) code {
+  padding: 0;
+}

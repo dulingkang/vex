@@ -1,0 +1,16 @@
+{{#if member}}
+  <div class="refPage">
+    {{> member_root member}}
+  </div>
+{{else}}
+  {{#if changes}}
+    {{> changelog changes}}
+  {{else}}
+  <div class="welcome">
+    <h1>Welcome to the VEX Coding Studio Command Reference!</h1>
+    <p>Here you will find documentation on all of the commands in your VCS language of choice.</p>
+    <p>Use the hamburger menu (<strong>≡</strong>) to open and close the command drawer.
+    <p>Use the language selector buttons in the lower left to switch languages.</p>
+  </div>
+  {{/if}}
+{{/if}}

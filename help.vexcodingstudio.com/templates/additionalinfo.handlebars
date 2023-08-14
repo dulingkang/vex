@@ -1,0 +1,16 @@
+{{#setLang}}
+  {{#ifAddOnContent "snippets"}}
+    <h3>Code Snippet</h3>
+    <div class="indent">
+      {{#ifAddOnContent "robotConfigs"}}
+        <span class="robotConfig">
+          <em>Robot Configuration:</em>&#160;{{{@addOnContent}}}
+        </span>
+      {{/ifAddOnContent}}
+      <textarea class="snippet">{{@addOnContent}}</textarea>
+    </div>
+  {{/ifAddOnContent}}
+  {{#ifAddOnContent "explainers"}}
+    {{{@addOnContent}}}
+  {{/ifAddOnContent}}
+{{/setLang}}

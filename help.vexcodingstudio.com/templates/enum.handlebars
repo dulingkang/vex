@@ -1,0 +1,19 @@
+<h2>Enum</h2>
+{{~> member_description .}}
+<table class="enumList detailTable detailTable-responsive detailTable-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each enumvalues}}
+      <tr>
+        <td>{{{name}}}</td>
+        <td>{{{desc}}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{> additionalinfo .}}

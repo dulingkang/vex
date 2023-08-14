@@ -1,0 +1,23 @@
+<h1 class="memberName">
+  <code>
+  {{#if classname~}}
+    {{{classname}}}.
+  {{~/if~}}
+  {{#if namespace~}}
+    {{{namespace}}}.
+  {{~/if~}}
+  {{{name}}}
+  </code>
+</h1>
+
+<div class="indent">
+  {{#if enumvalues}}
+    {{> enum .}}
+  {{else}}
+    {{#if overloads}}
+      {{> function .}}
+    {{else}}
+      {{> variable .}}
+    {{/if}}
+  {{/if}}
+</div>
